@@ -1,0 +1,6 @@
+framework module Pods_ContactImage {
+  umbrella header "Pods-ContactImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

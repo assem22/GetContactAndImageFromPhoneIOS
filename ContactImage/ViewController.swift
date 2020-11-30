@@ -6,16 +6,37 @@
 //
 
 import UIKit
+import RealmSwift
 import ContactsUI
+import Photos
+
 
 class ViewController: UIViewController {
-
+    
+    let realm = try! Realm()
+    var incomingData: Contact? = nil
+    
     let contactsController = CNContactPickerViewController()
     
-    let vc = UIImagePickerController()
+    let imageController = UIImagePickerController()
     
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
     @IBOutlet weak var imageField: UIImageView!
+    
+    @IBAction func saveContact(_ sender: UIButton) {
+        let newContact = Contact()
+        newContact.name = name.text!
+        newContact.number = contactLabel.text!
+        let image = NSData(data: imageField.image!.jpegData(compressionQuality: 0.5)!)
+        newContact.image = image
+        try! realm.write{
+            realm.add(newContact)
+        }
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ContactListViewController") as? ContactListViewController
+        navigationController?.pushViewController(vc!, animated: true)
+    }
     
     @IBAction func addContact(_ sender: UIButton) {
         self.present(contactsController, animated: true, completion: nil)
@@ -51,7 +72,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contactsController.delegate = self
-        vc.delegate = self
+        imageController.delegate = self
     }
 
     
@@ -59,9 +80,9 @@ class ViewController: UIViewController {
     {
         if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
         {
-            vc.sourceType = UIImagePickerController.SourceType.camera
-            vc.allowsEditing = true
-            self.present(vc, animated: true, completion: nil)
+            imageController.sourceType = UIImagePickerController.SourceType.camera
+            imageController.allowsEditing = true
+            self.present(imageController, animated: true, completion: nil)
         }
         else
         {
@@ -73,9 +94,9 @@ class ViewController: UIViewController {
 
     func openGallary()
     {
-        vc.sourceType = UIImagePickerController.SourceType.photoLibrary
-        vc.allowsEditing = true
-        self.present(vc, animated: true, completion: nil)
+        imageController.sourceType = UIImagePickerController.SourceType.photoLibrary
+        imageController.allowsEditing = true
+        self.present(imageController, animated: true, completion: nil)
     }
 
 }
@@ -84,17 +105,22 @@ class ViewController: UIViewController {
 extension ViewController: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         print(contact.phoneNumbers[0].value.stringValue)
+        print(contact.familyName + " " + contact.familyName)
         self.contactLabel.text = contact.phoneNumbers[0].value.stringValue
+        self.name.text = contact.givenName + " " + contact.familyName
     }
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
             imageField.image = image
         }
+        
         picker.dismiss(animated: true, completion: nil)
     }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }

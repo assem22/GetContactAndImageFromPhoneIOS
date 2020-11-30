@@ -3,19 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BC3EE1441F100D5A1989862 /* Pods_ContactImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9685E67640DB01C2AAE58D /* Pods_ContactImage.framework */; };
 		922390CB256CAB7600F4BF28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922390CA256CAB7600F4BF28 /* AppDelegate.swift */; };
 		922390CD256CAB7600F4BF28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922390CC256CAB7600F4BF28 /* SceneDelegate.swift */; };
 		922390CF256CAB7600F4BF28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922390CE256CAB7600F4BF28 /* ViewController.swift */; };
 		922390D2256CAB7600F4BF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922390D0256CAB7600F4BF28 /* Main.storyboard */; };
 		922390D4256CAB7800F4BF28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922390D3256CAB7800F4BF28 /* Assets.xcassets */; };
 		922390D7256CAB7800F4BF28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922390D5256CAB7800F4BF28 /* LaunchScreen.storyboard */; };
+		9234B4C125725BA200778BFE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234B4BF25725BA200778BFE /* TableViewCell.swift */; };
+		9234B4C225725BA200778BFE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9234B4C025725BA200778BFE /* TableViewCell.xib */; };
+		9234B4C525725E7B00778BFE /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234B4C425725E7B00778BFE /* ContactListViewController.swift */; };
+		9234B4D125727E9300778BFE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9234B4D025727E9300778BFE /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3824EA9315D155D237C70763 /* Pods-ContactImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactImage.release.xcconfig"; path = "Target Support Files/Pods-ContactImage/Pods-ContactImage.release.xcconfig"; sourceTree = "<group>"; };
+		6ACFED190CA4139AF208F0AB /* Pods-ContactImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactImage.debug.xcconfig"; path = "Target Support Files/Pods-ContactImage/Pods-ContactImage.debug.xcconfig"; sourceTree = "<group>"; };
 		922390C7256CAB7600F4BF28 /* ContactImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922390CA256CAB7600F4BF28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922390CC256CAB7600F4BF28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,11 @@
 		922390D3256CAB7800F4BF28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922390D6256CAB7800F4BF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922390D8256CAB7800F4BF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9234B4BF25725BA200778BFE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9234B4C025725BA200778BFE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9234B4C425725E7B00778BFE /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		9234B4D025727E9300778BFE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CA9685E67640DB01C2AAE58D /* Pods_ContactImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC3EE1441F100D5A1989862 /* Pods_ContactImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				922390C9256CAB7600F4BF28 /* ContactImage */,
 				922390C8256CAB7600F4BF28 /* Products */,
+				A22FDAF9820A36BF5FD59EAD /* Pods */,
+				DE203F370214BAC3686C33D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +78,29 @@
 				922390D3256CAB7800F4BF28 /* Assets.xcassets */,
 				922390D5256CAB7800F4BF28 /* LaunchScreen.storyboard */,
 				922390D8256CAB7800F4BF28 /* Info.plist */,
+				9234B4BF25725BA200778BFE /* TableViewCell.swift */,
+				9234B4C025725BA200778BFE /* TableViewCell.xib */,
+				9234B4C425725E7B00778BFE /* ContactListViewController.swift */,
+				9234B4D025727E9300778BFE /* Models.swift */,
 			);
 			path = ContactImage;
+			sourceTree = "<group>";
+		};
+		A22FDAF9820A36BF5FD59EAD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6ACFED190CA4139AF208F0AB /* Pods-ContactImage.debug.xcconfig */,
+				3824EA9315D155D237C70763 /* Pods-ContactImage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE203F370214BAC3686C33D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA9685E67640DB01C2AAE58D /* Pods_ContactImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922390DB256CAB7800F4BF28 /* Build configuration list for PBXNativeTarget "ContactImage" */;
 			buildPhases = (
+				23DA2BEAFFDCEB5FD71E1B84 /* [CP] Check Pods Manifest.lock */,
 				922390C3256CAB7500F4BF28 /* Sources */,
 				922390C4256CAB7500F4BF28 /* Frameworks */,
 				922390C5256CAB7500F4BF28 /* Resources */,
+				23542741350A982E5D446400 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922390D7256CAB7800F4BF28 /* LaunchScreen.storyboard in Resources */,
+				9234B4C225725BA200778BFE /* TableViewCell.xib in Resources */,
 				922390D4256CAB7800F4BF28 /* Assets.xcassets in Resources */,
 				922390D2256CAB7600F4BF28 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +171,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23542741350A982E5D446400 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ContactImage/Pods-ContactImage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ContactImage/Pods-ContactImage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ContactImage/Pods-ContactImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23DA2BEAFFDCEB5FD71E1B84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContactImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		922390C3256CAB7500F4BF28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				922390CF256CAB7600F4BF28 /* ViewController.swift in Sources */,
+				9234B4C525725E7B00778BFE /* ContactListViewController.swift in Sources */,
+				9234B4C125725BA200778BFE /* TableViewCell.swift in Sources */,
+				9234B4D125727E9300778BFE /* Models.swift in Sources */,
 				922390CB256CAB7600F4BF28 /* AppDelegate.swift in Sources */,
 				922390CD256CAB7600F4BF28 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +367,7 @@
 		};
 		922390DC256CAB7800F4BF28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ACFED190CA4139AF208F0AB /* Pods-ContactImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +386,7 @@
 		};
 		922390DD256CAB7800F4BF28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3824EA9315D155D237C70763 /* Pods-ContactImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
